@@ -129,6 +129,7 @@ def banner():
  print("    \033[1;36;40m Github      : \033[1;32;40m www.github.com/tuhin1729")
  print("    \033[1;36;40m YouTube     : \033[1;32;40m https://bit.ly/TuhinTheHacker")
  print("    \033[1;36;40m Dedicated to: \033[1;34;40m Diya Saha")
+ print("    \033[1;31;40mIf some of them doesn't work then create another one.")
  print("    \033[1;31;40mIf you are using termux then zoom out your screen otherwise you won't understand anything.")
  print("\n\n")
 
