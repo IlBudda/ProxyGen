@@ -9,117 +9,123 @@ color1=["\033[1;31;40m","\033[1;32;40m","\033[1;33;40m","\033[1;34;40m","\033[1;
 def color():
  return str(random.choice(color1))
 def generate(url,count):
- r=requests.get(url)
- soup=BeautifulSoup(r.content,'html.parser')
- list = soup.find(class_='table table-striped table-bordered')
- list1 = list.findAll('td')
- iplist=[]
- portlist=[]
- codelist=[]
- countrylist=[]
- anonymitylist=[]
- googlelist=[]
- httpslist=[]
- last_checklist=[]
- finallist=[]
- j=0
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  iplist.append(a)
-  j=j+8
- j=1
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  portlist.append(a)
-  j=j+8
- j=2   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  codelist.append(a)
-  j=j+8   
- j=3   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  countrylist.append(a)
-  j=j+8 
- j=4   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  anonymitylist.append(a)
-  j=j+8
- j=5   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  googlelist.append(a)
-  j=j+8  
- j=6   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  httpslist.append(a)
-  j=j+8  
- j=7   
- while(j<(8*count)):
-  a=str(list1[j].contents[0])
-  last_checklist.append(a)
-  j=j+8
- for k in range (0,count):
-     print(color()+iplist[k]+":"+color()+portlist[k]+"\t"+color()+codelist[k]+"\t"+color()+countrylist[k]+"\t\t"+color()+anonymitylist[k]+color()+"\tGoogle:"+googlelist[k]+color()+"\thttps:"+httpslist[k]+color()+"\tLast checked "+last_checklist[k]+"\n")
+ try:
+  r=requests.get(url)
+  soup=BeautifulSoup(r.content,'html.parser')
+  list = soup.find(class_='table table-striped table-bordered')
+  list1 = list.findAll('td')
+  iplist=[]
+  portlist=[]
+  codelist=[]
+  countrylist=[]
+  anonymitylist=[]
+  googlelist=[]
+  httpslist=[]
+  last_checklist=[]
+  finallist=[]
+  j=0
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   iplist.append(a)
+   j=j+8
+  j=1
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   portlist.append(a)
+   j=j+8
+  j=2   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   codelist.append(a)
+   j=j+8   
+  j=3   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   countrylist.append(a)
+   j=j+8 
+  j=4   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   anonymitylist.append(a)
+   j=j+8
+  j=5   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   googlelist.append(a)
+   j=j+8  
+  j=6   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   httpslist.append(a)
+   j=j+8  
+  j=7   
+  while(j<(8*count)):
+   a=str(list1[j].contents[0])
+   last_checklist.append(a)
+   j=j+8
+  for k in range (0,count):
+      print(color()+iplist[k]+":"+color()+portlist[k]+"\t"+color()+codelist[k]+"\t"+color()+countrylist[k]+"\t\t"+color()+anonymitylist[k]+color()+"\tGoogle:"+googlelist[k]+color()+"\thttps:"+httpslist[k]+color()+"\tLast checked "+last_checklist[k]+"\n")
+ except:
+  print("\033[1;31;40m%d Proxies can't be generated at this time. Try giving a smaller amount(i.e 1) or try again after some time."%count)
 def socks(count):
- r=requests.get("https://www.socks-proxy.net")
- soup=BeautifulSoup(r.content,'html.parser')
- list = soup.find(class_='table table-striped table-bordered')
- list1 = list.findAll('td')
- iplist=[]
- portlist=[]
- codelist=[]
- countrylist=[]
- versionlist=[]
- anonymitylist=[]
- httpslist=[]
- last_checklist=[]
- j=0
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  iplist.append(a)
-  j=j+8
- j=1
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  portlist.append(a)
-  j=j+8
- j=2
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  codelist.append(a)
-  j=j+8
- j=3
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  countrylist.append(a)
-  j=j+8
- j=4
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  versionlist.append(a)
-  j=j+8
- j=5
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  anonymitylist.append(a)
-  j=j+8
- j=6
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  httpslist.append(a)
-  j=j+8
- j=7
- while(j<8*count):
-  a=str((list1[j].contents[0]))
-  last_checklist.append(a)
-  j=j+8
+ try:
+  r=requests.get("https://www.socks-proxy.net")
+  soup=BeautifulSoup(r.content,'html.parser')
+  list = soup.find(class_='table table-striped table-bordered')
+  list1 = list.findAll('td')
+  iplist=[]
+  portlist=[]
+  codelist=[]
+  countrylist=[]
+  versionlist=[]
+  anonymitylist=[]
+  httpslist=[]
+  last_checklist=[]
+  j=0
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   iplist.append(a)
+   j=j+8
+  j=1
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   portlist.append(a)
+   j=j+8
+  j=2
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   codelist.append(a)
+   j=j+8
+  j=3
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   countrylist.append(a)
+   j=j+8
+  j=4
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   versionlist.append(a)
+   j=j+8
+  j=5
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   anonymitylist.append(a)
+   j=j+8
+  j=6
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   httpslist.append(a)
+   j=j+8
+  j=7
+  while(j<8*count):
+   a=str((list1[j].contents[0]))
+   last_checklist.append(a)
+   j=j+8
 
- for k in range (0,count):
-  print(color()+iplist[k]+":"+color()+portlist[k]+"\t"+color()+codelist[k]+"\t"+color()+countrylist[k]+"\t"+color()+versionlist[k]+"\t"+color()+anonymitylist[k]+"\thttps:"+color()+httpslist[k]+"\tLast Checked :"+color()+last_checklist[k]+"\n")
+  for k in range (0,count):
+   print(color()+iplist[k]+":"+color()+portlist[k]+"\t"+color()+codelist[k]+"\t"+color()+countrylist[k]+"\t"+color()+versionlist[k]+"\t"+color()+anonymitylist[k]+"\thttps:"+color()+httpslist[k]+"\tLast Checked :"+color()+last_checklist[k]+"\n")
+ except:
+  print("\033[1;31;40m%d Proxies can't be generated at this time. Try giving a smaller amount(i.e 1) or try again after some time."%count)
 def banner():
  os.system("clear")
  os.system("toilet -fmono12 -F gay ProxyGen")
@@ -134,9 +140,9 @@ def banner():
  print("\n\n")
 
 banner()
-number=int(raw_input("\033[1;33;40mEnter the number of proxies you want to generate(Max:10) :"))
-if(number>10):
- print("\033[1;31;40mEnter a number <=10. Quiting...")
+number=int(raw_input("\033[1;33;40mEnter the number of proxies you want to generate(Max:40) :"))
+if(number>40):
+ print("\033[1;31;40mEnter a number <=40. Quiting...")
  time.sleep(1.5)
  sys.exit()  
 banner()
