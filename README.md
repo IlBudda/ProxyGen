@@ -4,8 +4,7 @@
 <p align="center">An open-source Proxy Generator.</p><br>
 
 
-###############  Coded by      : Tuhin Bose ##############<br>
-########### Inspired by        : Charlie:The Hacker ##############<br>
+###############  Coded by      : tuhin1729 ##############<br>
 ##############  Instagram id   : www.instagram.com/tuhin1729 ##############<br>
 ##############  Github         : www.github.com/tuhin1729 ##############<br>
 ############## YouTube Channel : https://bit.ly/TuhinTheHacker ##############<br>
