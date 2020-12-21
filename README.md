@@ -8,7 +8,6 @@
 ##############  Instagram id   : www.instagram.com/tuhin1729 ##############<br>
 ##############  Github         : www.github.com/tuhin1729 ##############<br>
 ############## YouTube Channel : https://bit.ly/TuhinTheHacker ##############<br>
-############## Dedicated to    : Diya Saha ##############<br>
 
 
 
